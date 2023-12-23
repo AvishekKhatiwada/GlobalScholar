@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Countries| GlobalScholar";
+    Layout = "_Mylayout";
+}
+
+<div class="main-container">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    Add Country Name
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-controller="Country" asp-action="Add" class="w-50">
+                        <div class="form-group">
+                            <label for="Name">Country Name</label>
+                            <input id="Name" name="Name" type="text" class="form-control" required />
+                            @*<span asp-validation-for="Name" class="text-danger"></span>*@
+                        </div>
+                        <div class="form-group mt-1">
+                            <button type="submit" class="btn btn-success">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

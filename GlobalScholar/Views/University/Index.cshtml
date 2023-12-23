@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Universities| GlobalScholar";
+    Layout = "_Mylayout";
+}
+
+<div class="main-container">
+    <div>
+        <div class="d-flex justify-content-end">
+            @*<p>University Details</p>*@
+            <a asp-controller="University" asp-action="Add" class="btn btn-primary btn-sm mb-1">Add</a>
+        </div>
+        <div class="unitable">
+            <table class="table ">
+                <thead class="thead">
+                    <tr class="table-head">
+                        <th scope="col">S.N</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Established</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Website(Url)</th>
+                        <th scope="col">Accepted Exams</th>
+                        <th scope="col">Accomodation</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>University of Melbourne</td>
+                        <td>1853</td>
+                        <td>Melbourne, Australia</td>
+                        <td>public</td>
+                        <td>www.unimelb.edu.au</td>
+                        <td>TOEFL,PTE,IELTS,GMAT,GRE</td>
+                        <td>27668 AUD</td>
+                        <td>
+                            <a href="#" class="btn btn-success btn-sm mb-1">Update</a>
+                            <a href="#" class="btn btn-danger btn-sm mb-1">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

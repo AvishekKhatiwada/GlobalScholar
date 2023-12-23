@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Exam Type| GlobalScholar";
+    Layout = "_Mylayout";
+}
+
+@model GlobalScholar.Models.ExamType;
+<div class="main-container">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    Update Exam Type
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-controller="ExamType" asp-action="Edit" class="w-50">
+                        <div class="form-group">
+                            <label for="Name">Name</label>
+                            <input id="Name" type="text" value="@Model.Name" name="Name" class="form-control" required />
+                            @*<span asp-validation-for="Name" class="text-danger"></span>*@
+                        </div>
+                        <div class="form-group mt-1">
+                            <button type="submit" class="btn btn-success">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

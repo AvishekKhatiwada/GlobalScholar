@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Exam Type| GlobalScholar";
+    Layout = "_Mylayout";
+}
+
+<div class="main-container">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    Add Exam Type
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-controller="ExamType" asp-action="Add" class="w-50">
+                        <div class="form-group">
+                            <label for="Name">Name</label>
+                            <input id="Name" type="text" name="Name" class="form-control" required />
+                            @*<span asp-validation-for="Name" class="text-danger"></span>*@
+                        </div>
+                        <div class="form-group mt-1">
+                            <button type="submit" class="btn btn-success">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div class="mt-2 px-2 py-1 w-25">
+    <form asp-controller="ExamType" asp-action="Add" asp-method="POST">
+        <div class="form-group">
+            <label for="ExamTypeName">Exam Type Name</label>
+            <input type="text" class="form-control mt-1" id="Examtypename" placeholder="Exam Type">
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm mt-1">Add</button>
+    </form>
+</div>*@

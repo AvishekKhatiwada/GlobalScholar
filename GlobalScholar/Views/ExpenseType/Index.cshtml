@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Expense Type| GlobalScholar";
+    Layout = "_Mylayout";
+    var a = 1;
+}
+
+<div class="main-container">
+    <div class="w-50">
+        <div class="d-flex justify-content-end">
+            @*<p>ExpenseType Details</p>*@
+            <a asp-controller="ExpenseType" asp-action="Add" class="btn btn-primary btn-sm mb-1">Add</a>
+        </div>
+        <div class="ExpenseTypetable">
+            <table class="table">
+                <thead class="thead">
+                    <tr class="table-head">
+                        <th scope="col">S.N</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model)
+                    {
+                    <tr>
+                        <th scope="row">@a</th>
+                        <td>@item.Name</td>
+                        <td>
+                             <a asp-controller="ExpenseType" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm mb-1">Update</a>
+                                <a asp-controller="ExpenseType" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm mb-1">Delete</a>
+                        </td>
+                        </tr>
+                        a++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
